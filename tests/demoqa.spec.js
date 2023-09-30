@@ -1,10 +1,5 @@
 import {test, expect} from '@playwright/test'
 
-// test('has locator', async ({page}) => {
-//     await page.goto('https://demoqa.com/text-box')
-//     await expect(page.getByPlaceholder('Full name')).toHaveClass('/form-control/')
-// })
-
 test('Fields have class', async ({ page }) => {
     await page.goto('https://automationintesting.online');
     await expect(page.getByTestId('ContactName')).toHaveClass('form-control')
